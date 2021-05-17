@@ -79,7 +79,7 @@ while True:
 
         break
 '''
-
+# Exercicio 71:
 print('-=' * 10, 'CAIXA ELETRÔNICO', '-=' * 10)
 while True:
     # Cédulas:
@@ -91,12 +91,20 @@ while True:
     cedula20 = (saque - (cedula50 * 50)) // 20
     cedula10 = (saque - ((cedula50 * 50) + (cedula20 * 20))) // 10
     cedula1 = (saque - ((cedula50 * 50) + (cedula20 * 20) + (cedula10 * 10))) // 1
+
     print('=' * 60)
-    print(f'São {cedula50} cédula(s) de 50R$')
-    print(f'São {cedula20} cédula(s) de 20R$')
-    print(f'São {cedula10} cédula(s) de 10R$')
-    print(f'São {cedula1} cédula(s) de 1R$')
+
+    if cedula50 > 0:
+        print(f'São {cedula50} cédula(s) de 50R$')
+    if cedula20 > 0:
+        print(f'São {cedula20} cédula(s) de 20R$')
+    if cedula10 > 0:
+        print(f'São {cedula10} cédula(s) de 10R$')
+    if cedula1 > 0:
+        print(f'São {cedula1} cédula(s) de 1R$')
+
     print('=' * 60)
+
     sair = str(input('Deseja sair [S/N]: ')).upper().split()[0].strip()
     if 'S' in sair:
         break
