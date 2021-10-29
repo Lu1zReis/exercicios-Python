@@ -3,6 +3,7 @@ times = ('Atlético-MG', 'Palmeiras', 'Fortaleza', 'Bragantino', 'Flamengo', 'At
 CincoPrimeiros = times[:5]
 z4 = times[16:]
 pos = times.index('Chapecoense')
+
 print('-=' * 30)
 print(f'A classificação do Brasileirão é: {times}')
 print('-=' * 30)
