@@ -3,11 +3,11 @@ BinX = []
 newX = []
 aux = 0
 
-for c in range(0, 4):
+while x != 0:
     x = x / 2
-    if x % 2 == True:
+    if x % 2 == 0:
         BinX.append(0)
-    if x % 1 == True:
+    if x % 2 == 1:
         BinX.append(1)
 
 # for i in range(0, 4):

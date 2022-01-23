@@ -1,5 +1,4 @@
 lista = list()
-reversa = list()
 sair = 'n'
 while 's' not in sair:
     lista.append(int(input('Adicione um valor: ')))
