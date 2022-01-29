@@ -21,6 +21,6 @@ for c, v in enumerate(lista):
     if v == menor:
         PosMenor.append(c)
 
+print(f'Foram digitados os valores {lista}')
 print(f'O maior número é {maior} As posições dele são: {PosMaior}')
 print(f'O menor número é {menor} As posições dele são: {PosMenor}')
-

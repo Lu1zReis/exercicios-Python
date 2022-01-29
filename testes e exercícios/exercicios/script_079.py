@@ -1,12 +1,11 @@
 valores = list()
 sair = 'n'
-x = i = 0
+i = 0
 while 's' not in sair:
     analise = 'erro'
     while 'acerto' not in analise:
         valores.append(int(input('Adicione um valor: ')))
-        x = valores[i]
-        if valores.count(x) > 1:
+        if valores.count(valores[i]) > 1:
             print('Número existente, por favor adicione outro')
             valores.pop()
         else:

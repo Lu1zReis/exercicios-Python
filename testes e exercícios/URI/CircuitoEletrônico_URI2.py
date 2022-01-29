@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Variaveis:
 x, y = input().split(' ')
 x = int(x)
@@ -94,3 +95,4 @@ soma()
 ordem()
 
 print(transf(val, val2, val3)[2])
+
