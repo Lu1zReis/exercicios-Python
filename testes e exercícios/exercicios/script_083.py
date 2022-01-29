@@ -1,3 +1,4 @@
+"""
 validar = list()
 val1 = val2 = 0
 validar = input('Digite a expressão: ').split(')')
@@ -12,3 +13,18 @@ for pos, num in enumerate(validar):
                 break 
 print(f'Lista = {validar}')
 print('Expressão Válida!' if val1 == val2 else 'Expressão Incorreta!')
+"""
+
+# Outra forma #
+expr = str(input('Digite a expressão: '))
+pilha = list()
+for caract in expr:
+    if caract == '(':
+        pilha.append('(')
+    elif caract == ')':
+        if len(pilha) > 0:
+            pilha.pop()
+        else:
+            pilha.append(')')
+            break
+print(f'Expressão válida!' if len(pilha) == 0 else 'Expressão incorreta!')
