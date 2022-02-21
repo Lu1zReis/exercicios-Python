@@ -1,17 +1,24 @@
 import random
-from tkinter import N
+import time
 sorteados = list()
 numeros = list()
 v = 0
-quant = int(input('Quantos jogos quer sortear? '))
-print(f'SORTEANDO {quant} JOGOS')
-k = 0
-v = random.randint(0, 6)
-numeros.append(v)
-while len(numeros) < 6:
-    for c in numeros:
-        v = random.randint(0, 6)
-        if v == c:
-            v = random.randint(0, 6)
+print('=-'*3, 'JOGO DA MEGA SENA', '-='*3)
+quant = int(input('\nQuantos jogos quer sortear? '))
+
+print(f'\n<<<-----SORTEANDO {quant} JOGO(S)----->>>')
+
+for i in range(0, quant):
+
+    while len(numeros) < 6:
+        while v in numeros:
+            v = random.randint(1, 60)
         numeros.append(v)
-print(numeros)
+
+    sorteados.append(sorted(numeros[:]))
+    numeros.clear()
+
+for pos, val in enumerate(sorteados):
+    time.sleep(1.3)
+    print(f'Jogo {pos+1}: {val}')
+print('<=========> !BOA SORTE! <=========>')
