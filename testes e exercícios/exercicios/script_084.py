@@ -33,5 +33,19 @@ for pos, val in enumerate(cadastrados):
             menPes.append(val[:])
 
 print(f'Foram cadastrados {len(cadastrados)} valor(es)')
-print(f'O(s) mais pesados: {maisPes}')
-print(f'O(s) menos pesados: {menPes}')
+if(len(maisPes) == 1):
+    print(f'O mais pesado: {maisPes[0][1]} kg. de {maisPes[0][0]}')
+else:
+    i = 0
+    print(f'Os mais pesados: {maisPes[0][1]} kg. de', end=' ')
+    while i < len(maisPes):
+        print(maisPes[i][0], end=' ')
+        i+=1
+if(len(menPes) == 1):
+    print(f'O menos pesado: {menPes[0][1]} kg. de {menPes[0][0]}')
+else:
+    i = 0
+    print(f'Os menos pesados: {menPes[0][1]} kg. de', end=' ')
+    while i < len(menPes):
+        print(menPes[i][0], end=' ')
+        i+=1

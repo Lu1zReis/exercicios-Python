@@ -20,7 +20,7 @@ for i in range(0, 3):
 
 print('------------Matriz------------')
 for j in range(0, 3):
-    print(f'[ {matriz[j][0]} ][ {matriz[j][1]} ][ {matriz[j][2]} ]')
+    print(f'[ {matriz[j][0]:^5} ][ {matriz[j][1]:^5} ][ {matriz[j][2]:^5} ]')
     
     # Soma da 3ª coluna
     soma3C += matriz[j][2]
