@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Variaveis:
 x, y = input().split(' ')
 x = int(x)
