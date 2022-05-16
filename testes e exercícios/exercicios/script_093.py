@@ -8,7 +8,7 @@ for i in range(0, jogador['partidas']):
     jogador['gols'].append(int(input(f"Quantos gols {jogador['nome']} fez na {i+1}ª partida? ")))
     jogador['total'] += jogador['gols'][i]
 
-print('-=' * 25)
+print('-=' * 25)    
 print(jogador)
 print('-=' * 25)
 
