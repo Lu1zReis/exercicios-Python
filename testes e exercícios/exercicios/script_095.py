@@ -21,16 +21,29 @@ print('=-' * 20)
 print(jogadores)
 print('=-' * 20)
 
-print('cod  nome      gols          total')
+print('cod   nome         gols           total')
 for i in range(0, len(jogadores)):
-    print(f" {i:^2}{jogadores[i]['nome']:^8}    {jogadores[i]['gols']}{jogadores[i]['total']:>10}")
+    print(f" {i:>2} {jogadores[i]['nome']:^8}    {str(jogadores[i]['gols']):^10}", end='')
+    print(f"{jogadores[i]['total']:>10}")
 print('=-' * 20)
 
-while mostrar != 999:
+while True:
     mostrar = int(input('Mostrar os dados de qual jogador?(999 para) '))
+    if mostrar == 999:
+        break
+    else:
+        while True:
+            if mostrar >= len(jogadores) or mostrar < 0:
+                mostrar = int(input('Digite um jogador existente!(999 para) '))
+                if mostrar == 999:
+                    break
+            else:
+                break
+    if mostrar != 999:    
+        print(f"\nLEVANTAMENTO DO JOGADOR {jogadores[mostrar]['nome']}")
+        quant = jogadores[mostrar]['partidas']
 
-    print(f"\nLEVANTAMENTO DO JOGADOR {jogadores[mostrar]['nome']}")
-    quant = jogadores[mostrar]['partidas']
-
-    for p in range(0, quant):
-        print(f"no jogo {p} fez {jogadores[mostrar]['gols'][p]}")
+        for p in range(0, quant):
+            print(f"no jogo {p} fez {jogadores[mostrar]['gols'][p]}")
+    else:
+        break
