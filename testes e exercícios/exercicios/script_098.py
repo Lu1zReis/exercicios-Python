@@ -1,24 +1,42 @@
-# from time import sleep 
+from time import sleep 
 
-def contador(passos):
-    print('')
-    
-    # primeiro algoritmo (0 até 10, de 1 em 1)
-    for i in range(0, 11, 1):
-        print(i, end=' ')
-    print('\n')
-
-    # segundo algoritmo (10 até 0, de 1 em 1)
-    for j in range(10, -1, -1):
-        print(j, end=' ')
-
-    print('\n')
+def contador(p1, p2, p3):
 
     # terceiro algoritmo (personalizado pelo usuário)
-    inicio = passos[0]
-    fim = passos[1]
-    passo = passos[2]
+    inicio = p1
+    fim = p2
+    passo = p3
 
-    
+    if inicio > fim:
+        if passo > 0:
+            passo = passo - (passo * 2)
+        if passo == 0:
+            passo -= 1
+    else:
+        if passo == 0:
+            passo = 1
+        if passo < 0:
+            passo *= -1
+        
 
-contador(0)
+    for c in range(inicio, fim+passo, passo):
+        if fim < inicio:
+            if c >= fim:
+                print(c, end=' ', flush=True)
+                sleep(0.2)
+        else:
+            print(c, end=' ', flush=True)
+            sleep(0.2)
+
+    print('FIM!')
+
+contador(1, 10, 1)
+contador(10, 0, 2)
+
+print('=-' * 15)
+
+ini = int(input('I: '))
+fim = int(input('F: '))
+pas = int(input('P: '))
+
+contador(ini, fim, pas)

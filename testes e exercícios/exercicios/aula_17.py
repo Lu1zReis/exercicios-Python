@@ -6,7 +6,7 @@ print(num)
 
 num.append(6) # assim será a forma correta
 
-num.insert(0, 1) # no 1º parametro irá ficar a posição que o valor do 2º parametro será adicionado.
+num.insert(0, 1) # no 1º parametro irá ficar a posição que o valor do 2º parametro será adicionado. 
 
 # num.sort() #irá organizar a lista e sort(reverse=True) irá organizar a lista do maior ao menor
 
